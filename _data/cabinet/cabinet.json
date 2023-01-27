@@ -1,0 +1,181 @@
+{
+  "cabinet": [
+    {
+      "position": "President",
+      "officers": [
+        {
+          "name": "Daniel Calderón",
+          "email": "d.calderon@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Vice president",
+      "officers": [
+        {
+          "name": "Tomás Dominguez",
+          "email": "tomas.dominguezchiozza@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Treasurer",
+      "officers": [
+        {
+          "name": "Tona Matos",
+          "email": "t.wiederhold@mail.utoronto.ca"
+        },
+        {
+          "name": "Narmada Varadarajan",
+          "email": "narmada.varadarajan@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Secretary",
+      "officers": [
+        {
+          "name": "Luciano Salvetti",
+          "email": "luciano.salvetti@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Webmaster",
+      "officers": [
+        {
+          "name": "Dominic Shillingford",
+          "email": "d.shillingford@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "GSU representatives",
+      "officers": [
+        {
+          "name": "Mariam Alhawaj",
+          "email": "mariam.alhawaj@mail.utoronto.ca"
+        },
+        {
+          "name": "Friedemann Krannich",
+          "email": "f.krannich@mail.utoronto.ca"
+        },
+        {
+          "name": "Yimang Tang",
+          "email": "ytang@math.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "CUPE representatives",
+      "officers": [
+        {
+          "name": "Patrice Miosan-Roy",
+          "email": "patmroy@mail.utoronto.ca"
+        },
+        {
+          "name": "Shuyang Shen",
+          "email": "shuyang.shen@mail.utoronto.ca"
+        },
+        {
+          "name": "C Yu",
+          "email": "cyu@math.toronto.edu"
+        }
+      ]
+    },
+    {
+      "position": "Tea time organizers",
+      "officers": [
+        {
+          "name": "David Knapik",
+          "email": "david.knapik@mail.utoronto.ca"
+        },
+        {
+          "name": "Kevin Watmough",
+          "email": "kevin.watmough@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Graduate seminar committee",
+      "officers": [
+        {
+          "name": "David Miyamoto",
+          "email": "david.miyamoto@mail.utoronto.ca"
+        },
+        {
+          "name": "Alexander Slamen",
+          "email": "alexander.slamen@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Departmental council representatives",
+      "officers": [
+        {
+          "name": "Daniel Calderón",
+          "email": "d.calderon@mail.utoronto.ca"
+        },
+        {
+          "name": "Shuyang Shen",
+          "email": "shuyang.shen@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Graduate planning committee representatives",
+      "officers": [
+        {
+          "name": "Afiny Akdemir",
+          "email": "afiny@math.utoronto.ca"
+        },
+        {
+          "name": "Matthew Sunohara",
+          "email": "matthew.sunohara@math.utoronto.ca"
+        },
+        {
+          "name": "Brinda Venkataramani",
+          "email": "venkatb@math.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Social committee",
+      "officers": [
+        {
+          "name": "Mehul Gupta",
+          "email": "mmgupta@math.utoronto.ca"
+        },
+        {
+          "name": "Mikale Reddy",
+          "email": "mikale.reddy@mail.utoronto.ca"
+        },
+        {
+          "name": "Jake Zimmermann",
+          "email": "jake.zimmermann@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "MU liaison",
+      "officers": []
+    },
+    {
+      "position": "Computer committee representative",
+      "officers": []
+    },
+    {
+      "position": "Library committee representatives",
+      "officers": [
+        {
+          "name": "Leo Jiang",
+          "email": "ljiang@math.toronto.edu"
+        },
+        {
+          "name": "Nischay Reddy",
+          "email": "nischay.reddy@mail.utoronto.ca"
+        }
+      ]
+    }
+  ]
+}
