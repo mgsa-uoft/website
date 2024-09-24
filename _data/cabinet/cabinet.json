@@ -4,8 +4,8 @@
       "position": "President",
       "officers": [
         {
-          "name": "Daniel Calderón",
-          "email": "d.calderon@mail.utoronto.ca"
+          "name": "Narmada Varadarajan",
+          "email": "narmada.varadarajan@mail.utoronto.ca"
         }
       ]
     },
@@ -13,8 +13,8 @@
       "position": "Vice president",
       "officers": [
         {
-          "name": "Tomás Dominguez",
-          "email": "tomas.dominguezchiozza@mail.utoronto.ca"
+          "name": "Tona Matos",
+          "email": "t.wiederhold@mail.utoronto.ca"
         }
       ]
     },
@@ -22,12 +22,8 @@
       "position": "Treasurer",
       "officers": [
         {
-          "name": "Tona Matos",
-          "email": "t.wiederhold@mail.utoronto.ca"
-        },
-        {
-          "name": "Narmada Varadarajan",
-          "email": "narmada.varadarajan@mail.utoronto.ca"
+          "name": "Lora Hreish",
+          "email": "lora.hreish@mail.utoronto.ca"
         }
       ]
     },
@@ -41,46 +37,50 @@
       ]
     },
     {
-      "position": "Webmaster",
+      "position": "Academic committee",
       "officers": [
         {
-          "name": "Dominic Shillingford",
-          "email": "d.shillingford@mail.utoronto.ca"
+          "name": "Vivian He",
+          "email": "vivian.he@mail.utoronto.ca"
+        },
+        {
+          "name": "Sacha Goldman",
+          "email": "sacha.goldman@mail.utoronto.ca"
+        },
+	{
+	  "name": "William Verreault",
+	  "email": "william.verreault@utoronto.ca"
+	}
+      ]
+    },
+    {
+      "position": "Graduate seminar committee",
+      "officers": [
+        {
+          "name": "Grisha Taroian",
+          "email": "gtaroyan@math.utoronto.ca"
+        },
+        {
+          "name": "Robbert Liu",
+          "email": "robbert.liu@utoronto.ca"
         }
       ]
     },
     {
-      "position": "GSU representatives",
+      "position": "Social committee",
       "officers": [
         {
-          "name": "Mariam Alhawaj",
-          "email": "mariam.alhawaj@mail.utoronto.ca"
+          "name": "Nischay Reddy",
+          "email": "nischay.reddy@mail.utoronto.ca"
         },
         {
-          "name": "Friedemann Krannich",
-          "email": "f.krannich@mail.utoronto.ca"
+          "name": "Andy Ramirez-Cote",
+          "email": "andy.ramirezcote@mail.utoronto.ca"
         },
-        {
-          "name": "Yimang Tang",
-          "email": "ytang@math.utoronto.ca"
-        }
-      ]
-    },
-    {
-      "position": "CUPE representatives",
-      "officers": [
-        {
-          "name": "Patrice Miosan-Roy",
-          "email": "patmroy@mail.utoronto.ca"
-        },
-        {
-          "name": "Shuyang Shen",
-          "email": "shuyang.shen@mail.utoronto.ca"
-        },
-        {
-          "name": "C Yu",
-          "email": "cyu@math.toronto.edu"
-        }
+	{
+	  "name": "Artur Kravtsov (Intramurals)",
+	  "email": "artur.kravtsov@mail.utoronto.ca"
+	}
       ]
     },
     {
@@ -91,34 +91,42 @@
           "email": "david.knapik@mail.utoronto.ca"
         },
         {
-          "name": "Kevin Watmough",
-          "email": "kevin.watmough@mail.utoronto.ca"
+          "name": "Indira Mishra",
+          "email": "indira.mishra@mail.utoronto.ca"
         }
       ]
     },
     {
-      "position": "Graduate seminar committee",
+      "position": "CUPE representatives",
       "officers": [
         {
-          "name": "David Miyamoto",
-          "email": "david.miyamoto@mail.utoronto.ca"
+          "name": "Alice Rolf",
+          "email": "alice.rolf@mail.utoronto.ca"
+        },
+        {
+          "name": "Sean Griswold",
+          "email": "sean.griswold@mail.utoronto.ca"
         },
         {
           "name": "Alexander Slamen",
           "email": "alexander.slamen@mail.utoronto.ca"
-        }
+        },
+	{
+	  "name": "Patrice Moisan-Roy",
+	  "email": "patmroy@math.utoronto.ca"
+	}
       ]
     },
     {
       "position": "Departmental council representatives",
       "officers": [
         {
-          "name": "Daniel Calderón",
-          "email": "d.calderon@mail.utoronto.ca"
+          "name": "Kai Ye",
+          "email": "kaidi.ye@mail.utoronto.ca"
         },
         {
-          "name": "Shuyang Shen",
-          "email": "shuyang.shen@mail.utoronto.ca"
+          "name": "James Munday",
+          "email": "james.munday@mail.utoronto.ca"
         }
       ]
     },
@@ -126,54 +134,30 @@
       "position": "Graduate planning committee representatives",
       "officers": [
         {
-          "name": "Afiny Akdemir",
-          "email": "afiny@math.utoronto.ca"
+          "name": "Alexander Slamen",
+          "email": "alexander.slamen@mail.utoronto.ca"
         },
         {
-          "name": "Matthew Sunohara",
-          "email": "matthew.sunohara@math.utoronto.ca"
-        },
-        {
-          "name": "Brinda Venkataramani",
-          "email": "venkatb@math.utoronto.ca"
+          "name": "Yiming Tang",
+          "email": "ytang@math.utoronto.ca"
         }
       ]
     },
     {
-      "position": "Social committee",
+      "position": "GSU representative",
       "officers": [
         {
-          "name": "Mehul Gupta",
-          "email": "mmgupta@math.utoronto.ca"
-        },
-        {
-          "name": "Mikale Reddy",
-          "email": "mikale.reddy@mail.utoronto.ca"
-        },
-        {
-          "name": "Jake Zimmermann",
-          "email": "jake.zimmermann@mail.utoronto.ca"
+          "name": "Xinwen Ding",
+          "email": "xinwen.ding@mail.utoronto.ca"
         }
       ]
     },
     {
-      "position": "MU liaison",
-      "officers": []
-    },
-    {
-      "position": "Computer committee representative",
-      "officers": []
-    },
-    {
-      "position": "Library committee representatives",
+      "position": "Webmaster",
       "officers": [
         {
-          "name": "Leo Jiang",
-          "email": "ljiang@math.toronto.edu"
-        },
-        {
-          "name": "Nischay Reddy",
-          "email": "nischay.reddy@mail.utoronto.ca"
+          "name": "Dominic Shillingford",
+          "email": "d.shillingford@mail.utoronto.ca"
         }
       ]
     }

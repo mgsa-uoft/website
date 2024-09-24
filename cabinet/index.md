@@ -11,7 +11,8 @@
   <th style="width: 40%">Email(s)</th>
   </tr>
 {% for office in site.data.cabinet.cabinet.cabinet %}
-  {% for member in office.officers %}
+  {% assign members = office.officers | sort : "name" %}
+  {% for member in members %}
   <tr>
   {% if forloop.first == true %}
   <td rowspan={{ forloop.length }}>

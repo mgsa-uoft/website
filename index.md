@@ -13,4 +13,4 @@ The MGSA is also committed to protecting the interests of math graduate students
 
 The MGSA is led by an elected executive team, consisting of a President, Vice President, Secretary, and Treasurer. All math graduate students are welcome to run for these positions or to participate in the various committees.
 
-If you have any questions about the MGSA or would like to get involved, please don't hesitate to contact us at <a href="mailto:mgsa@math.utoronto.ca">mgsa@math.utoronto.ca</a>. We welcome all comments and suggestions.
+If you have any questions about the MGSA or would like to get involved, please don't hesitate to contact us at mgsa [at] studentorg [dot] utoronto [dot] ca. We welcome all comments and suggestions.
