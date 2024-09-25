@@ -115,22 +115,6 @@ The process includes:
 
 ---
 
-## Key Concepts to Explore
-
-If you're interested in learning more about the tools and concepts mentioned, here are some terms you can search for:
-
-- **Git**: Understand version control and how it manages changes in projects.
-- **GitHub**: Explore collaborative development and repository hosting.
-- **Jekyll**: Learn how static site generators work and how they simplify website creation.
-- **Cron**: Discover how scheduled tasks are set up in Unix-like systems.
-- **Automation Scripts**: Delve into how scripts automate repetitive tasks.
-- **Static Websites vs. Dynamic Websites**: Understand the differences and use cases for each.
-- **Website Deployment**: Learn about various methods to deploy websites to servers.
-- **Backup Strategies**: Explore the importance of backups in data management.
-- **Server Management**: Gain insight into how servers like **coxeter** are used to host websites.
-
----
-
 ## Conclusion
 
 Our website's distribution relies on a combination of powerful tools and automation to ensure it remains current and reliable. By using Git and GitHub for version control, Jekyll for site generation, and automation scripts scheduled with cron on our server **coxeter**, we maintain an efficient workflow that minimizes manual effort while maximizing uptime and accuracy.
@@ -140,7 +124,3 @@ We hope this overview provides a clear understanding of our website deployment p
 ---
 
 **Last Updated:** 2024-09-24
-
----
-
-**Note:** This document is stored in the **www-readme** file on the server **coxeter** and is distributed elsewhere for informational purposes.--
