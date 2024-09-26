@@ -13,8 +13,8 @@
       "position": "Vice president",
       "officers": [
         {
-          "name": "Tona Matos",
-          "email": "t.wiederhold@mail.utoronto.ca"
+          "name": "James Munday",
+          "email": "james.munday@mail.utoronto.ca"
         }
       ]
     },
@@ -22,8 +22,8 @@
       "position": "Treasurer",
       "officers": [
         {
-          "name": "Lora Hreish",
-          "email": "lora.hreish@mail.utoronto.ca"
+          "name": "Austin Sun",
+          "email": "austin.sun@mail.utoronto.ca"
         }
       ]
     },
@@ -31,8 +31,26 @@
       "position": "Secretary",
       "officers": [
         {
-          "name": "Luciano Salvetti",
-          "email": "luciano.salvetti@mail.utoronto.ca"
+          "name": "Herng Yi Cheng",
+          "email": "herngyi.cheng@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Academic chair",
+      "officers": [
+        {
+          "name": "Alisa Chistopolskaia",
+          "email": "alisa.chistopolskaia@mail.utoronto.ca"
+        }
+      ]
+    },
+    {
+      "position": "Social chair",
+      "officers": [
+        {
+          "name": "Vicente Marin Marquez",
+          "email": "vicente.marinmarquez@mail.utoronto.ca"
         }
       ]
     },
@@ -47,10 +65,10 @@
           "name": "Sacha Goldman",
           "email": "sacha.goldman@mail.utoronto.ca"
         },
-	{
-	  "name": "William Verreault",
-	  "email": "william.verreault@utoronto.ca"
-	}
+        {
+          "name": "William Verreault",
+          "email": "william.verreault@utoronto.ca"
+        }
       ]
     },
     {
@@ -77,10 +95,10 @@
           "name": "Andy Ramirez-Cote",
           "email": "andy.ramirezcote@mail.utoronto.ca"
         },
-	{
-	  "name": "Artur Kravtsov (Intramurals)",
-	  "email": "artur.kravtsov@mail.utoronto.ca"
-	}
+        {
+          "name": "Artur Kravtsov (Intramurals)",
+          "email": "artur.kravtsov@mail.utoronto.ca"
+        }
       ]
     },
     {
