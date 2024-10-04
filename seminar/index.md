@@ -11,9 +11,9 @@ Most talks are expository talks about mathematical topics, but we also accept ta
 ### Location and Schedule
 Thursdays BA 6183 @ 3:00
 
-[Schedule](https://docs.google.com/spreadsheets/d/1xlb87BfQ7QwwT29vOM1tZtzqs3s_ZVXEzuz2Oj_yjGk/edit?usp=sharing) 
+[Schedule](https://docs.google.com/spreadsheets/d/1ZPMXxpa_eln5Q424Ij1vF_7BM1FUJcnNLZ7Su6ZvgP8/edit?usp=sharing) 
 
 ### Signup
-We encourage all interested graduate students to sign up and give a talk [here](https://docs.google.com/spreadsheets/d/1xlb87BfQ7QwwT29vOM1tZtzqs3s_ZVXEzuz2Oj_yjGk/edit?usp=sharing). To sign up you will need to provide a *working* title. 
+We encourage all interested graduate students to sign up and give a talk [here](https://docs.google.com/spreadsheets/d/1ZPMXxpa_eln5Q424Ij1vF_7BM1FUJcnNLZ7Su6ZvgP8/edit?usp=sharing). To sign up you will need to provide a *working* title. 
 
 You will be asked to provide an abstract and final title for your talk at least a week before you speak. 
