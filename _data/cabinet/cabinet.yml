@@ -52,6 +52,13 @@ committees:
           email: srn.lin@mail.utoronto.ca
         - name: Osama Farooqui
           email: o.farooqui@mail.utoronto.ca
+          
+    - position: Teaching lunch
+      officers:
+        - name: Tresa LeBlanc-Doucet
+          email: tresa.leblanc.doucet@mail.utoronto.ca
+        - name: Luciano Salvetti
+          email: luciano.salvetti@mail.utoronto.ca
 
   Newsletter_committee:
     - position: Designer
