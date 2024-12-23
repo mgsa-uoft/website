@@ -1,0 +1,73 @@
+---
+layout: default
+title: Newsletter
+---
+
+<div id="newsletter-container" class="container text-center">
+  {% assign pages = 9 %}
+  {% for i in (1..pages) %}
+  <div id="page-{{ i }}" class="pdfViewer singlePageView d-block"></div>
+  {% if i == 1 %}
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOIyfTy4EenwV5ci3A-b9EogA-ulHNcxcQkuD8BJu6J81tmQ/viewform?embedded=true" class="w-100" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <!--
+
+    <p>A very unbiased survey checking whether or not people want durian at tea time.</p>
+    <p>If you say yes to the survey you are legally obliged to try the durian as well.</p>
+    <div>Email: <input></input></div>
+    <div>
+      Do you want durian at the Friday Tea Time?
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Yes!</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">No way!</label>
+      </div>
+    </div>
+  </div>
+  --!>
+  {% endif %}
+  
+  {% endfor %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf_viewer.mjs" type="module"></script>
+  
+  <script type="module">
+    const url = "{{ '/assets/newsletter-november/newsletter.pdf' | relative_url }}";
+  
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
+
+    const pdf = await pdfjsLib.getDocument(url).promise;
+    const eventBus = new pdfjsViewer.EventBus();
+
+    for (let i = 1; i <= {{ pages }}; i++) {
+      const page = await pdf.getPage(i);
+
+      const container = document.getElementById(`page-${i}`);
+      const { width } = container.getBoundingClientRect();
+
+      const viewport = page.getViewport({ scale: 1 });
+      const scale = width / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+
+      const pageView = new pdfjsViewer.PDFPageView({
+        container,
+        eventBus,
+        id: i,
+        defaultViewport: viewport,
+        scale,
+      });
+
+      pageView.setPdfPage(page);
+
+      await pageView.draw();
+      
+      window.addEventListener('resize', async () => {
+        const { width: newWidth } = container.getBoundingClientRect();
+        const newScale = newWidth / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+        await pageView.update({ scale: newScale });
+        await pageView.draw();
+      });
+    }
+  </script>
+</div>
