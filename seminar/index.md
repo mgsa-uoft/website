@@ -16,4 +16,6 @@ Thursdays BA 6183 @ 3:00 or on [Zoom](https://utoronto.zoom.us/j/84456163855).
 ### Signup
 We encourage all interested graduate students to sign up and give a talk [here](https://docs.google.com/spreadsheets/d/1ZPMXxpa_eln5Q424Ij1vF_7BM1FUJcnNLZ7Su6ZvgP8/edit?usp=sharing). To sign up you will need to provide a *working* title. 
 
+If you cannot make the usual time, we can move the time if that makes it work for you.
+
 You will be asked to provide an abstract and final title for your talk at least a week before you speak. 
