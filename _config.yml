@@ -1,1 +1,8 @@
 baseurl: "/website"
+defaults:
+  - scope:
+      path: ""  # Applies to everything
+    values:
+      layout: default
+      render_title: true
+      no_padding: false

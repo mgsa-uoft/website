@@ -20,6 +20,16 @@ initiativeformurl: "/assets/mgsa_initiative_form.pdf"
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf_viewer.css">
     <link rel="icon" type="image/png" href="{{ '/assets/mgsa_logo.png' | relative_url }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKERELNV3E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WKERELNV3E');
+    </script>
   </head>
 
   <body style="font-family: 'Computer Modern Sans', sans serif !important;">
@@ -57,11 +67,19 @@ initiativeformurl: "/assets/mgsa_initiative_form.pdf"
       </div>
     </nav>
 
+    {% if page.no_padding %}
+    <div class="container p-0">
+    {% else %}
     <div class="container">
-      <div class="row gx-5">
-        <div class="col-lg-9 pt-3 mt-3">
+    {% endif %}
+      <div class="row">
+        <div class="col-lg-9">
+          {% if page.render_title %}
+          <div class="mt-3">
           <h4>{{ page.title }}</h4>
           <hr>
+          </div>
+          {% endif %}
           {{ content }}
         </div>
         <div class="col-lg-3 bg-body-secondary mt-3 pt-3 mr-3 rounded">                                                                     

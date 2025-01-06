@@ -1,73 +1,229 @@
 ---
 layout: default
 title: Newsletter
+render_title: false
+no_padding: true
 ---
 
-<div id="newsletter-container" class="container text-center">
+<div id="newsletter-container" class="container mt-3 p-0 text-center">
   {% assign pages = 9 %}
   {% for i in (1..pages) %}
-  <div id="page-{{ i }}" class="pdfViewer singlePageView d-block"></div>
-  {% if i == 1 %}
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOIyfTy4EenwV5ci3A-b9EogA-ulHNcxcQkuD8BJu6J81tmQ/viewform?embedded=true" class="w-100" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  <!--
+  <div id="page-{{ i }}" class="shadow-lg pb-10 pdfViewer singlePageView d-block"></div>
 
-    <p>A very unbiased survey checking whether or not people want durian at tea time.</p>
-    <p>If you say yes to the survey you are legally obliged to try the durian as well.</p>
-    <div>Email: <input></input></div>
-    <div>
-      Do you want durian at the Friday Tea Time?
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Yes!</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">No way!</label>
+  {% if i != pages %}
+  <hr class="m-0">
+  {% endif %}
+
+  {% if i == 7 %}
+
+  <div class="pt-5 position-relative shadow-lg bg-body">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOIyfTy4EenwV5ci3A-b9EogA-ulHNcxcQkuD8BJu6J81tmQ/viewform?embedded=true" class="w-100" height="700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  {% if false %}
+  <div class="row align-items-center">
+    <div class="col-md-3 text-center mb-4 mb-md-0">
+      <img src="{{ '/assets/newsletter-november/durian.webp' | relative_url }}" class="img-fluid rounded" alt="Durian Image" height="150px">
+    </div>
+
+    <div class="col-md-9">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Durian at Tea Time Survey</h5>
+          <p class="card-text">A very unbiased survey checking whether or not people want durian at tea time.</p>
+          <p class="card-text text-muted">If you say yes to the survey, you are legally obliged to try the durian as well.</p>
+
+          <form onsubmit="handleSubmit(event)">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Do you want durian at the Friday Tea Time?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="durianOption" id="durianYes" value="yes" required>
+                <label class="form-check-label radio-label" for="durianYes">
+                  Yes!
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="durianOption" id="durianNo" value="no">
+                <label class="form-check-label radio-label" for="durianNo">
+                  No way!
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+        </div>
       </div>
     </div>
   </div>
-  --!>
   {% endif %}
-  
+  <hr class="m-0">
+  {% endif %}
+
   {% endfor %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf_viewer.mjs" type="module"></script>
-  
-  <script type="module">
-    const url = "{{ '/assets/newsletter-november/newsletter.pdf' | relative_url }}";
-  
-    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
-
-    const pdf = await pdfjsLib.getDocument(url).promise;
-    const eventBus = new pdfjsViewer.EventBus();
-
-    for (let i = 1; i <= {{ pages }}; i++) {
-      const page = await pdf.getPage(i);
-
-      const container = document.getElementById(`page-${i}`);
-      const { width } = container.getBoundingClientRect();
-
-      const viewport = page.getViewport({ scale: 1 });
-      const scale = width / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
-
-      const pageView = new pdfjsViewer.PDFPageView({
-        container,
-        eventBus,
-        id: i,
-        defaultViewport: viewport,
-        scale,
-      });
-
-      pageView.setPdfPage(page);
-
-      await pageView.draw();
-      
-      window.addEventListener('resize', async () => {
-        const { width: newWidth } = container.getBoundingClientRect();
-        const newScale = newWidth / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
-        await pageView.update({ scale: newScale });
-        await pageView.draw();
-      });
-    }
-  </script>
 </div>
+
+{% if false %}
+<script>
+  async function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Reference to the form element
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    // Disable the submit button
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...'; // Optional: Change button text
+
+    // Retrieve the email and durian preference values
+    const email = form.email.value.trim();
+    const supportsDurians = form.durianOption.value === 'yes';
+
+    // Define your JSONBin.io credentials and Bin ID
+    const BIN_ID = '6769ab6bacd3cb34a8be583a';
+
+    // Define the API endpoint
+    const apiEndpoint = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
+    try {
+      // Step 1: Fetch the existing data from the bin
+      const getResponse = await fetch(apiEndpoint + '/latest', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!getResponse.ok) {
+        const errorData = await getResponse.json();
+        throw new Error(`Error fetching bin data: ${errorData.message}`);
+      }
+
+      const existingData = await getResponse.json();
+
+      // Ensure the 'responses' array exists
+      if (!existingData.record.responses) {
+        existingData.record.responses = [];
+      }
+
+      // Step 2: Append the new response to the 'responses' array
+      existingData.record.responses.push({
+        email: email,
+        supportsDurians: supportsDurians.toString() // Convert boolean to string if needed
+      });
+
+      // Step 3: Update the bin with the new data
+      const updateResponse = await fetch(apiEndpoint, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(existingData.record)
+      });
+
+      if (!updateResponse.ok) {
+        const errorData = await updateResponse.json();
+        throw new Error(`Error updating bin: ${errorData.message}`);
+      }
+
+      const updateResult = await updateResponse.json();
+
+      // Success feedback to the user
+      alert('Thank you for your response!');
+      form.reset(); // Reset the form fields
+      console.log('Updated Bin Data:', updateResult);
+    } catch (error) {
+      // Error handling and feedback
+      console.error('Submission Error:', error);
+      alert(`There was an error submitting your response: ${error.message}`);
+    } finally {
+      // Re-enable the submit button
+      submitButton.disabled = false;
+      submitButton.textContent = 'Submit'; // Reset button text
+    }
+  }
+</script>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf_viewer.mjs" type="module"></script>
+<script type="module">
+  class CustomLinkService extends pdfjsViewer.PDFLinkService {
+    getDestinationHash(destination) {
+      return this.getAnchorUrl('#');
+    }
+
+    async getPageDestinationHash(destination) {
+      const destinationData = await this.pdfDocument.getDestination(destination);
+      const pageNumber = await this.pdfDocument.getPageIndex(destinationData[0]);
+      return this.getAnchorUrl(`#page-${pageNumber + 1}`);
+    }
+
+    get isInPresentationMode() {
+      return false;
+    }
+
+    async goToDestination(destination) {
+      window.location.href = await this.getPageDestinationHash(destination);
+    }
+  }
+
+  const url = "{{ '/assets/newsletter-november/newsletter.pdf' | relative_url }}";
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
+
+  const pdf = await pdfjsLib.getDocument(url).promise;
+  const eventBus = new pdfjsViewer.EventBus();
+
+  const layerProperties = {
+    annotationEditorUIManager: null,
+    annotationStorage: null,
+    downloadManager: null,
+    enableScripting: false,
+    fieldObjectsPromise: null,
+    findController: null,
+    hasJSActionsPromise: null,
+    get linkService() {
+      const linkService = new CustomLinkService();
+      linkService.setDocument(pdf);
+      return linkService;
+    },
+  };
+
+  for (let i = 1; i <= {{ pages }}; i++) {
+    const page = await pdf.getPage(i);
+
+    const container = document.getElementById(`page-${i}`);
+    const { width } = container.getBoundingClientRect();
+
+    const viewport = page.getViewport({ scale: 1 });
+    const scale = width / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+
+    const pageView = new pdfjsViewer.PDFPageView({
+      container,
+      eventBus,
+      id: i,
+      defaultViewport: viewport,
+      scale,
+      layerProperties,
+    });
+
+    pageView.setPdfPage(page);
+
+    await pageView.draw();
+
+    window.addEventListener('resize', async () => {
+      const { width: newWidth } = container.getBoundingClientRect();
+      const newScale = newWidth / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+      await pageView.update({ scale: newScale });
+      await pageView.draw();
+    });
+  }
+</script>
