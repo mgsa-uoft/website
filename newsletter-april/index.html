@@ -7,9 +7,9 @@ render_newsletter_past: true
 ---
 
 <div id="newsletter-container" class="container mt-3 p-0 text-center">
-  <p>Having trouble viewing the newsletter? Try opening in Google Chrome or Firefox, or <a href="{{ '/assets/newsletter-september/newsletter.pdf' | relative_url }}">download the newsletter as a PDF.</a></p>
+  <p>Having trouble viewing the newsletter? Try opening in Google Chrome or Firefox, or <a href="{{ '/assets/newsletter-april/newsletter.pdf' | relative_url }}">download the newsletter as a PDF.</a></p>
 
-  {% assign pages = 12 %}
+  {% assign pages = 13 %}
   {% for i in (1..pages) %}
   <div id="page-{{ i }}" class="pdfViewer shadow-lg singlePageView d-block"></div>
 
@@ -37,6 +37,7 @@ render_newsletter_past: true
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflea8D4Cz0LCdFlR6UsFuFpdo65WPvJPHcpgZgfB9XGCHiIw/viewform?embedded=true" class="w-100" height="700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
   {% endif %}
+  -->
   
   {% if i == pages %}
   <hr class="m-0 border-light">
@@ -51,9 +52,9 @@ render_newsletter_past: true
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd71YGvEWcqenDeO5NEdsFmAfIYVf5WWpqViPQS9VVLNGTwDQ/viewform?embedded=true" class="w-100" height="820px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 
+
   {% endif %}
-  -->
-  
+
   {% if i != pages %}
   <hr class="m-0 border-light">
   {% endif %}
@@ -84,7 +85,7 @@ render_newsletter_past: true
     }
   }
 
-  const url = "{{ '/assets/newsletter-september/newsletter.pdf' | relative_url }}";
+  const url = "{{ '/assets/newsletter-april/newsletter.pdf' | relative_url }}";
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
 
