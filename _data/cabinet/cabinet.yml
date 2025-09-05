@@ -2,13 +2,13 @@ committees:
   Executive:
     - position: President
       officers:
-        - name: Narmada Varadarajan
-          email: narmada.varadarajan@mail.utoronto.ca
+        - name: Grisha Taroyan 
+          email: grisha.taroian@mail.utoronto.ca
 
     - position: Vice president
       officers:
-        - name: James Munday
-          email: james.munday@mail.utoronto.ca
+        - name: Osama Farooqui
+          email: o.farooqui@mail.utoronto.ca
 
     - position: Treasurer
       officers:
@@ -17,95 +17,15 @@ committees:
 
     - position: Secretary
       officers:
-        - name: Herng Yi Cheng
-          email: herngyi.cheng@mail.utoronto.ca
+        - name: Kevin Santos
+          email: kevin.santos@mail.utoronto.ca
 
     - position: Academic chair
       officers:
-        - name: Alisa Chistopolskaia
-          email: alisa.chistopolskaia@mail.utoronto.ca
+        - name: Tresa LeBlanc-Doucet
+          email: tresa.leblanc.doucet@mail.utoronto.ca
 
     - position: Social chair
       officers:
-        - name: Vicente Marin Marquez
-          email: vicente.marinmarquez@mail.utoronto.ca
-  
-  Academic_committee:
-    - position: Graduate seminar
-      officers:
-        - name: Sacha Goldman
-          email: sacha.goldman@mail.utoronto.ca
-        - name: Fardin Syed
-          email: fardin.syed@mail.utoronto.ca
-
-    - position: Course planning
-      officers:
-        - name: Grisha Taroyan
-          email: grisha.taroian@mail.utoronto.ca
-        - name: Ahmadreza Khazaeipoul
-          email: ahmadreza.khazaeipoul@mail.utoronto.ca
-        - name: Federico Manganello
-          email: federico.manganello@mail.utoronto.ca
-        - name: Xinwen Ding
-          email: xinwen.ding@mail.utoronto.ca
-        - name: Sabrina Lin
-          email: srn.lin@mail.utoronto.ca
-        - name: Osama Farooqui
-          email: o.farooqui@mail.utoronto.ca
-          
-    - position: Teaching lunch
-      officers:
-        - name: Tresa LeBlanc-Doucet
-          email: tresa.leblanc.doucet@mail.utoronto.ca
-        - name: Luciano Salvetti
-          email: luciano.salvetti@mail.utoronto.ca
-
-  Newsletter_committee:
-    - position: Designer
-      officers:
-        - name: Isabel Beach
-          email: isabel.beach@mail.utoronto.ca
-
-    - position: Editor
-      officers:
-        - name: Charlie Griffin
-          email: charlie.griffin@mail.utoronto.ca
-        - name: Derek Wu
-          email: pangolin.wu@mail.utoronto.ca
-        - name: Brendan Isley
-          email: b.shuttleworth@mail.utoronto.ca 
-        - name: Maziar Farahzad
-          email: maziar.farahzad@mail.utoronto.ca
-
-  Social_committee:
-    - position: External events
-      officers:
-        - name: Emmanuel Sackeyfio
-          email: emmanuel.sackeyfio@mail.utoronto.ca
-
-    - position: Internal events
-      officers:
-        - name: Alexander Paul Kroitor
+        - name: Alex Kroitor
           email: alex.kroitor@mail.utoronto.ca
-        - name: Rishibh Prakash
-          email: r.prakash@mail.utoronto.ca 
-
-    - position: Tea time
-      officers:
-        - name: Nitit Jongsawatsataporn
-          email: n.jongsawatsataporn@mail.utoronto.ca 
-        - name: Alexander Mirabella
-          email: alexander.mirabella@mail.utoronto.ca 
-
-  Other:
-    - position: CUPE steward
-      officers:
-        - name: Alice Rolf
-          email: alice.rolf@mail.utoronto.ca
-
-    - position: Web designer
-      officers:
-        - name: Brinda Venkataramani
-          email: brinda.venkataramani@mail.utoronto.ca 
-        - name: Dominic Shillingford
-          email: d.shillingford@mail.utoronto.ca
