@@ -9,7 +9,7 @@ The Mathematics Graduate Student Seminar is a weekly seminar for graduate studen
 Most talks are expository talks about mathematical topics, but we also accept talks about anything related to being a mathematics graduate student. If you are unsure if your talk fits with our seminar, please feel free to reach out to us at mgsa [at] studentorg.utoronto.ca.
 
 ### Location and Schedule
-Tuesdays in BA 1170 @ 3:00 PM. 
+Tuesdays in BA 2139 @ 4:00 PM. (October 7 and 21 are in SU 440). 
 
 [Schedule](https://docs.google.com/spreadsheets/d/1Uw4FhYBaed25NEIxWNUNLrnQ_Yn7BXITPmmrcTNTxt4/edit?usp=sharing)
 
