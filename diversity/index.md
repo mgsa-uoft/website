@@ -1,6 +1,6 @@
 ---
   layout: default
-  title: Equity, Diversity & Incusion Statement
+  title: Equity, Diversity & Inclusion Statement
 ---
 
 
