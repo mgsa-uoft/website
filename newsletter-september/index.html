@@ -1,0 +1,113 @@
+---
+layout: default
+title: Newsletter
+render_title: false
+no_padding: true
+render_newsletter_past: true
+---
+
+<div id="newsletter-container" class="container mt-3 p-0 text-center">
+  <p>Having trouble viewing the newsletter? Try opening in Google Chrome or Firefox, or <a href="{{ '/assets/newsletter-september/newsletter.pdf' | relative_url }}">download the newsletter as a PDF.</a></p>
+
+  {% assign pages = 12 %}
+  {% for i in (1..pages) %}
+  <div id="page-{{ i }}" class="pdfViewer shadow-lg singlePageView d-block"></div>
+
+  {% if i == 11 %}
+  <hr class="m-0 border-light">
+
+  <div class="pt-3 position-relative shadow-lg bg-body">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpaZ7JoV39n3SM6ySJGkywTBYyWHaQYklUxgQHbdEcTiWiZg/viewform?embedded=true" class="w-100" height="872px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+  {% endif %}
+  
+  {% if i == 12 %}
+  <hr class="m-0 border-light">
+
+  <div class="pt-3 position-relative shadow-lg bg-body">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqpAEBE8EEvq-xNspyguh2LoSQV_RVCc3cEmZEmhorEd887Q/viewform?embedded=true" class="w-100" height="774px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+  {% endif %}
+  
+  {% if i != pages %}
+  <hr class="m-0 border-light">
+  {% endif %}
+
+  {% endfor %}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf_viewer.mjs" type="module"></script>
+<script type="module">
+  class CustomLinkService extends pdfjsViewer.PDFLinkService {
+    getDestinationHash(destination) {
+      return this.getAnchorUrl('#');
+    }
+
+    async getPageDestinationHash(destination) {
+      const destinationData = await this.pdfDocument.getDestination(destination);
+      const pageNumber = await this.pdfDocument.getPageIndex(destinationData[0]);
+      return this.getAnchorUrl(`#page-${pageNumber + 1}`);
+    }
+
+    get isInPresentationMode() {
+      return false;
+    }
+
+    async goToDestination(destination) {
+      window.location.href = await this.getPageDestinationHash(destination);
+    }
+  }
+
+  const url = "{{ '/assets/newsletter-september/newsletter.pdf' | relative_url }}";
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
+
+  const pdf = await pdfjsLib.getDocument(url).promise;
+  const eventBus = new pdfjsViewer.EventBus();
+
+  const layerProperties = {
+    annotationEditorUIManager: null,
+    annotationStorage: null,
+    downloadManager: null,
+    enableScripting: false,
+    fieldObjectsPromise: null,
+    findController: null,
+    hasJSActionsPromise: null,
+    get linkService() {
+      const linkService = new CustomLinkService();
+      linkService.setDocument(pdf);
+      return linkService;
+    },
+  };
+
+  for (let i = 1; i <= {{ pages }}; i++) {
+    const page = await pdf.getPage(i);
+
+    const container = document.getElementById(`page-${i}`);
+    const { width } = container.getBoundingClientRect();
+
+    const viewport = page.getViewport({ scale: 1 });
+    const scale = width / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+
+    const pageView = new pdfjsViewer.PDFPageView({
+      container,
+      eventBus,
+      id: i,
+      defaultViewport: viewport,
+      scale,
+      layerProperties,
+    });
+
+    pageView.setPdfPage(page);
+
+    await pageView.draw();
+
+    window.addEventListener('resize', async () => {
+      const { width: newWidth } = container.getBoundingClientRect();
+      const newScale = newWidth / viewport.width / pdfjsLib.PixelsPerInch.PDF_TO_CSS_UNITS;
+      await pageView.update({ scale: newScale });
+      await pageView.draw();
+    });
+  }
+</script>
