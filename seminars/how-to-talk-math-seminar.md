@@ -1,6 +1,7 @@
 ---
 layout: default
 title: How to Talk Mathematics
+permalink: /seminars/how-to-talk-math-seminar/
 ---
 
 ### Introduction
