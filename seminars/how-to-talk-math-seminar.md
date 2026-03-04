@@ -18,6 +18,7 @@ We host sessions where experienced speakers and faculty members share their tips
   * Teaching (math) classes
   * Giving good math talks
   * Good math writing
+
   with the emphasis on the first one.
 
 ### Talks this semester
