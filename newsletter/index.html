@@ -9,25 +9,19 @@ render_newsletter_past: true
 <div id="newsletter-container" class="container mt-3 p-0 text-center">
   <p>Having trouble viewing the newsletter? Try opening in Google Chrome or Firefox, or <a href="{{ '/assets/newsletter-november/newsletter.pdf' | relative_url }}">download the newsletter as a PDF.</a></p>
 
-  {% assign pages = 14 %}
+  {% assign pages = 19 %}
   {% for i in (1..pages) %}
   <div id="page-{{ i }}" class="pdfViewer shadow-lg singlePageView d-block"></div>
 
-  {% if i == 10 %}
+  {% if i == 13 %}
   <hr class="m-0 border-light">
 
   <div class="pt-3 position-relative shadow-lg bg-body">
-    <iframe style="height: 90vh; width: 100%;" src="https://crosshare.org/embed/Djz2WTq2l3CKkKo9OwrV/lOafNSxABAQA7zIlWTlouR84lWX2" frameborder="0" allowfullscreen="true" allowtransparency="true" allow="clipboard-write *"></iframe>
+    <iframe style="height: 90vh; width: 100%;" src="https://crosshare.org/embed/lu9OCWKDvC8IJwl2BQbJ/lOafNSxABAQA7zIlWTlouR84lWX2" frameborder="0" allowfullscreen="true" allowtransparency="true" allow="clipboard-write *"></iframe> 
   </div>
   {% endif %}
   
-  {% if i == 14 %}
-  <hr class="m-0 border-light">
-
-  <div class="pt-3 position-relative shadow-lg bg-body">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQ8fmsY7iCeEiwmdRJhdppOpciZ35CV5-0G0o3u9_xYjr0_g/viewform?embedded=true" class="w-100" height="564px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
-
+  {% if i == 19 %}
   <hr class="m-0 border-light">
 
   <div class="pt-3 position-relative shadow-lg bg-body">
@@ -65,7 +59,7 @@ render_newsletter_past: true
     }
   }
 
-  const url = "{{ '/assets/newsletter-november/newsletter.pdf' | relative_url }}";
+  const url = "{{ '/assets/newsletter-march/newsletter.pdf' | relative_url }}";
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs";
 
