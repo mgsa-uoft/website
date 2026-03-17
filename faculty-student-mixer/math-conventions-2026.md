@@ -198,31 +198,19 @@ title: Mathematical Conventions Survey 2026
   ];
 
   document.addEventListener("DOMContentLoaded", function() {
-    // Fetch the CSV file
-    fetch('{{ site.baseurl }}/assets/faculty-student-mixer/2026/answers.csv')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then(csvText => {
-        // Parse the CSV
-        Papa.parse(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          complete: function(results) {
-            const data = results.data;
-            renderCharts(data);
-          },
-          error: function(error) {
-            showError(`Error parsing CSV: ${error.message}`);
-          }
-        });
-      })
-      .catch(error => {
-        showError(`Failed to load survey data: ${error.message}. Make sure the file exists at /assets/faculty-student-mixer/2026/answers.csv`);
-      });
+    const csvText = "Submission,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21,Q22,Q23,Q24,Q25,Q26,Q27,Q28,Q29,Q30\n1,No,1,\"i, but not by definition.\",n + m,m/n,Yes,Yes,\\exists,\"-\\Delta u = f\",F[f],\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,No,Yes,D_n,\\mathcal{L},axa^{-1},e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,upright,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",y,lay-tek.,No.,f*** you.\n2,Yes,,\"Undefined.\",n + m,n/m,Yes,No,|,\"\\Delta u = f\",\\hat{f},\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,No,No,D_n,m.,axa^{-1},e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,upright,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\u3088,lay-tek.,No.,f*** you.\n3,No,1,\"i, by definition.\",m + n,m/n,Yes,No,:,\"-\\Delta u = f\",\\hat{f},\"exist (or can exist)\",the integers mod p,I accept the axiom of choice.,Yes,No,D_{2n},\\lambda,a^{-1}xa,e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,upright,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\\mathscr{Y},lay-tek.,No.,f*** you.\n4,Yes,1,\"i, but not by definition.\",n + m,n/m,Yes,No,|,\"\\Delta u = f\",F[f],\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,Yes,Yes,D_{2n},\\mu,a^{-1}xa,e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,upright,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\u3088,lay-tek.,No.,9.\n5,Yes,1,,m + n,a/b,No,Yes & No,|,, \\hat{f},\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,No,No,D_{2n},\\mathcal{L},a^{-1}xa,10.,\\|x\\|,, \\log(x)\\log(x),{1},Yes,slanted (like dx).,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\u3088,lay-tek.,No.,f*** you.\n6,Yes,1,\"i, by definition.\",n + m,n/m,Yes,No,:,\"-\\Delta u = f\",F[f],\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,No,No,D_{2n},\\mathcal{L},,e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,slanted (like dx).,is real-valued.,Other: h_A,lay-tek.,Yes.,f*** you.\n7,No,1,\"Undefined.\",m + n,m/n,No,No,,,,,,,,No,D_n,m.,axa^{-1},10.,\\|x\\|,Y,\\log(\\log(x)).,{},No,slanted (like dx).,is real-valued.,y,luh-tek.,No.,\n8,Yes,1,\"i, by definition.\",m + n,m/n,Yes,No,|,\"\\Delta u = f\",\\hat{f},\"do not exist (or cannot exist).\",the ring of p-adic integers,I accept the axiom of choice.,No,Yes,D_{2n},\\mathcal{L},a^{-1}xa,e,\\|x\\|,Y,\\log(x)\\log(x),{1},Yes & No,upright,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\\mathscr{Y},lay-tek.,No.,invalid syntax\n9,Yes,\"Undefined.\",\"i, by definition.\",m + n,m/n,No,No,:,\"-\\Delta u = f\",\\hat{f},\"exist (or can exist)\",the ring of p-adic integers,\"I reject the axiom of choice, but I accept the axiom of countable choice.\",No,No,D_{2n},,,e,\\|x\\|,f(X),\\log(x)\\log(x),{},Yes,slanted (like dx).,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",y,lay-tek.,Yes.,f*** you.\n10,No,1,\"i, by definition.\",m + n,m/n,Yes,No,|,\"\\Delta u = f\",\\hat{f},\"exist (or can exist)\",the ring of p-adic integers,I accept the axiom of choice.,Yes,Yes,D_{2n},\\lambda,axa^{-1},e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,slanted (like dx).,is real-valued.,\\mathscr{Y},lay-tek.,Yes.,f*** you.\n11,No,1,,m + n,m/n,Yes,No,:,\"-\\Delta u = f\",\\hat{f},\"exist (or can exist)\",,\"I reject the axiom of choice, but I accept the axiom of countable choice.\",No,No (bvl),D_{2n},m.,,e,\\|x\\|,f(X),\\log(x)\\log(x),{1},Yes,upright (like dx).,\"is allowed to take values in {-\\infty, +\\infty} (but not both).\",\u3088,lay-tek.,Yes.,f*** you.\n";
+    // Parse the CSV
+    Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
+      complete: function(results) {
+        const data = results.data;
+        renderCharts(data);
+      },
+      error: function(error) {
+        showError(`Error parsing CSV: ${error.message}`);
+      }
+    });
   });
 
   function showError(message) {
