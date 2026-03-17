@@ -1,0 +1,262 @@
+\documentclass[a4paper,12pt]{exam}
+\usepackage{ amsfonts, amsmath, amssymb, url, mathrsfs,etoolbox}
+\usepackage{geometry}
+\usepackage{multicol} % For multiple columns
+\usepackage[utf8x]{inputenc}
+\DeclareUnicodeCharacter{3088}{\yo}
+
+\font\maljapanese=dmjhira at 3ex
+
+
+% Set up page layout
+\geometry{
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.5cm,
+    right=1.5cm,
+    headsep=0.5cm,
+    headheight=3cm,
+}
+
+\pagestyle{head}
+\header{Faculty-Student Mixer 2026}{}{Page \thepage \ of 2}
+\runningheadrule
+\firstpageheadrule
+
+
+\title{Mathematical Conventions Survey \\
+\small Questions taken from Thomas Lam's survey: \url{https://cims.nyu.edu/~tjl8195/survey/results.html}}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\thispagestyle{headandfoot}
+\vspace{-0.75in}
+
+
+\begin{multicols}{2}
+\begin{questions}
+
+		\begin{samepage}
+		\question Is $0\in \mathbb{N}$?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+        \end{samepage}
+        
+        \begin{samepage}
+    \question What is $0^0$? 
+        \begin{checkboxes}
+            \choice 0.
+            \choice 1.
+            \choice Indeterminate.
+            \choice Undefined.
+        \end{checkboxes}
+			\end{samepage}
+    \question What is $\sqrt{-1}$? 
+        \begin{checkboxes}
+            \choice $i$, by definition.
+            \choice $i$, but not by definition.
+            \choice Undefined.
+        \end{checkboxes}
+
+    \question What is the sum of two integers? 
+        \begin{checkboxes}
+            \choice $m+n$
+            \choice $n+m$
+        \end{checkboxes}
+
+    \question What is the quotient of two integers?
+        \begin{checkboxes}
+            \choice $m/n$
+            \choice $n/m$
+        \end{checkboxes}
+
+    \question Is the empty graph connected?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+
+    \question Is $f(x)=3$ increasing?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+
+\begin{samepage}
+    \question Fill in the blank: 
+    \[2\mathbb{Z}=\{n\in \mathbb{Z}\quad \underline{~~~~} \quad n \text{ is even}\}.\]
+        \begin{checkboxes}
+            \choice $|$
+            \choice $:$
+            \choice s.t.
+            \choice $\ni$ 
+            \choice Other: \underline{\hspace{3cm}}
+        \end{checkboxes}
+    \end{samepage}
+    
+    \begin{samepage}
+    \question What is the eigenvalue problem for the Laplacian? 
+    \begin{checkboxes}
+    \choice $\Delta u = \lambda u$.
+    \choice $-\Delta u=\lambda u$.
+    \end{checkboxes}
+    \end{samepage}
+    \begin{samepage}
+    \question What is the Fourier Transform of $f$?
+        \begin{checkboxes}
+            \choice $\widehat{f}$.
+            \choice $f\, \hat{}$.
+            \choice $\mathcal{F}[f]$.
+        \end{checkboxes}
+	\end{samepage}
+    \question Numbers...
+        \begin{checkboxes}
+            \choice do not exist (or cannot exist).
+            \choice exist (or can exist).
+        \end{checkboxes}
+
+    \question What is $\mathbb{Z}_p$? 
+        \begin{checkboxes}
+            \choice the finite field of $p$ elements.
+            \choice the integers mod $p$.
+            \choice the ring of $p$-adic integers.
+        \end{checkboxes}
+
+    \question Do you accept the axiom of choice? 
+        \begin{checkboxes}
+            \choice I accept the axiom of choice.
+            \choice I reject the axiom of choice, but I accept the axiom of countable choice.
+            \choice I reject the axiom of countable choice. 
+        \end{checkboxes}
+
+    \question Are rings commutative?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+
+\begin{samepage}
+    \question Are rings unital?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+  \end{samepage}
+\begin{samepage}
+    \question What is the group of symmetries of a regular $n$-gon?
+        \begin{checkboxes}
+            \choice $D_n$.
+            \choice $D_{2n}$.
+        \end{checkboxes}
+\end{samepage}
+    \question What is the symbol for the Lebesgue measure? 
+        \begin{checkboxes}
+            \choice $\mathcal{L}$.
+            \choice $\lambda$.
+            \choice m.
+            \choice $\mu$.
+        \end{checkboxes}
+
+    \question Let $a$ and $x$ be elements of a group. What is the conjugation of $x$ via $a$?
+        \begin{checkboxes}
+            \choice $a^{-1}xa$.
+            \choice $axa^{-1}$.
+        \end{checkboxes}
+
+    \question What is the base of $\log$? 
+        \begin{checkboxes}
+            \choice 2.
+            \choice $e$.
+            \choice 10.
+        \end{checkboxes}
+
+    \question For $x\in \mathbb{R}^n$, what is the norm of $x$? 
+        \begin{checkboxes}
+            \choice $|x|$.
+            \choice $\|x\|$.
+        \end{checkboxes}
+
+    \question What is the range of $f:X\to Y$? 
+        \begin{checkboxes}
+            \choice $f(X)$.
+            \choice $Y$. 
+        \end{checkboxes}
+
+    \question What is $\log^2(x)$? 
+        \begin{checkboxes}
+            \choice $\log(\log(x))$.
+            \choice $\log(x)\log(x)$.
+        \end{checkboxes}
+
+\begin{samepage}
+    \question What is the set of limit points of $\{1\}$? 
+        \begin{checkboxes}
+            \choice $\{\}$.
+            \choice $\{1\}$.
+        \end{checkboxes}
+\end{samepage}
+\begin{samepage}
+    \question Is $f(x)=\frac{1}{x}$ continuous? 
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+\end{samepage}
+    \question When integrating, the symbol for the differential should be ...
+        \begin{checkboxes}
+            \choice upright (like $\text{d}x$).
+            \choice slanted (like $dx$).
+        \end{checkboxes}
+
+\begin{samepage}
+    \question A signed measure...
+        \begin{checkboxes}
+            \choice is real-valued. 
+            \choice is allowed to take values in $\{-\infty,+\infty\}$ (but not both). 
+        \end{checkboxes}
+\end{samepage}
+    \question What is the usual variable name for the Yoneda embedding?
+        \begin{checkboxes}
+            \choice $y$.
+            \choice $Y$.
+            \choice $\mathscr{Y}$.
+            \choice \!\!{\maljapanese\char"0G}.
+        \end{checkboxes}
+
+    \question What is the pronunciation of "\LaTeX"?
+        \begin{checkboxes}
+            \choice lah-tek.
+            \choice lah-teks.
+            \choice lay-tek.
+            \choice lay-teks.
+            \choice luh-tek.
+            \choice Other: \underline{\hspace{3cm}}
+        \end{checkboxes}
+
+    \question Is $f(x)=3x+1$ linear?
+        \begin{checkboxes}
+            \choice Yes.
+            \choice No.
+        \end{checkboxes}
+
+    \question What is the value of $6\div2(1+2)$?
+        \begin{checkboxes}
+            \choice f*** you.
+            \choice 1.
+            \choice 9.
+        \end{checkboxes}
+
+\end{questions}
+
+        \end{multicols}
+
+
+
+
+
+\end{document}

@@ -26,11 +26,17 @@ We host sessions where experienced speakers and faculty members share their tips
 * **Feb 10** -- Boris Khesin -- [Welcome to the How to Talk Mathematics Seminar!](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1770757800-1769827155-446); [Slides of the talk]({{ '/assets/BetterTeaching.pdf' | relative_url }})
 * **Feb 23** -- Dror Bar-Natan -- [The Hardest Math I've Ever Really Used](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1771881000-1770593829-276); [Webpage of the talk](https://drorbn.net/to26)
 * **Mar 3** -- Mary Pugh -- [Some Thoughts on Test Design](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1772572200-1771895060-753)
+* **Mar 17** -- Almut Burchard -- [Joys of Teaching Mathematics](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1773778200-1773339876-678)
+  * *What is the role of teaching, within our life in Mathematics? What motivates us, what are the challenges, and how does our teaching practice intersect with other goals and demands?*
+* **Mar 24** -- Elden Elmanto -- Working class mathematics
+
 
 ### Useful Resources
 
-* [Paul Halmos: How to Talk Mathematics](https://www.ams.org/profession/leaders/workshops/gcoll.pdf)
+* [Paul Halmos: How to Talk Mathematics]({{ '/assets/teaching-seminar/how-to-talk-mathematics-halmos.pdf' | relative_url }})
+* [Paul Halmos: How to Write Mathematics]({{ '/assets/teaching-seminar/how-to-write-mathematics-halmos.pdf' | relative_url }})
 * [Terry Tao's Blog: Advice on giving talks](https://terrytao.wordpress.com/career-advice/talks/)
+
 
 ### Organizers
 
