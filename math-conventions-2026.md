@@ -5,14 +5,30 @@ title: Mathematical Conventions Survey 2026
 
 <style>
   .conventions-container {
-    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #333;
   }
   
-  .conventions-intro {
+  .conventions-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .conventions-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .conventions-header p {
     font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
     line-height: 1.6;
   }
   
@@ -44,6 +60,11 @@ title: Mathematical Conventions Survey 2026
     color: #2d3748;
     line-height: 1.4;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3em;
   }
   
   .chart-wrapper {
@@ -107,13 +128,13 @@ title: Mathematical Conventions Survey 2026
     border-radius: 50%;
     display: inline-block;
   }
-
 </style>
 
 <div class="conventions-container">
-  <p class="conventions-intro">
-    Results from the 2026 Faculty-Student Mixer. We asked 30 questions about mathematical conventions to find out where our department stands on the most pressing issues in mathematics.
-  </p>
+  <div class="conventions-header">
+    <h1>Mathematical Conventions Survey 2026</h1>
+    <p>Results from the 2026 Faculty-Student Mixer. We asked 30 questions about mathematical conventions to find out where our department stands on the most pressing issues in mathematics.</p>
+  </div>
   
   <div id="loading-state" class="loading">
     <div class="spinner"></div>
@@ -151,36 +172,36 @@ title: Mathematical Conventions Survey 2026
 <script>
   // Questions mapped to their respective columns in the CSV using exact LaTeX from Conventions.tex
   const questions = [
-    { id: "Q1", text: "1. Is \\(0\\in \\mathbb{N}\\)?" },
-    { id: "Q2", text: "2. What is \\(0^0\\)?" },
-    { id: "Q3", text: "3. What is \\(\\sqrt{-1}\\)?" },
+    { id: "Q1", text: "1. Is $0\\in \\mathbb{N}$?" },
+    { id: "Q2", text: "2. What is $0^0$?" },
+    { id: "Q3", text: "3. What is $\\sqrt{-1}$?" },
     { id: "Q4", text: "4. What is the sum of two integers?" },
     { id: "Q5", text: "5. What is the quotient of two integers?" },
     { id: "Q6", text: "6. Is the empty graph connected?" },
-    { id: "Q7", text: "7. Is \\(f(x)=3\\) increasing?" },
-    { id: "Q8", text: "8. Fill in the blank: \\(2\\mathbb{Z}=\\{n\\in \\mathbb{Z}\\quad \\underline{~~~~} \\quad n \\text{ is even}\\}\\)." },
+    { id: "Q7", text: "7. Is $f(x)=3$ increasing?" },
+    { id: "Q8", text: "8. Fill in the blank: $2\\mathbb{Z}=\\{n\\in \\mathbb{Z}\\quad \\underline{~~~~} \\quad n \\text{ is even}\\}$." },
     { id: "Q9", text: "9. What is the eigenvalue problem for the Laplacian?" },
-    { id: "Q10", text: "10. What is the Fourier Transform of \\(f\\)?" },
+    { id: "Q10", text: "10. What is the Fourier Transform of $f$?" },
     { id: "Q11", text: "11. Numbers..." },
-    { id: "Q12", text: "12. What is \\(\\mathbb{Z}_p\\)?" },
+    { id: "Q12", text: "12. What is $\\mathbb{Z}_p$?" },
     { id: "Q13", text: "13. Do you accept the axiom of choice?" },
     { id: "Q14", text: "14. Are rings commutative?" },
     { id: "Q15", text: "15. Are rings unital?" },
-    { id: "Q16", text: "16. What is the group of symmetries of a regular \\(n\\)-gon?" },
+    { id: "Q16", text: "16. What is the group of symmetries of a regular $n$-gon?" },
     { id: "Q17", text: "17. What is the symbol for the Lebesgue measure?" },
-    { id: "Q18", text: "18. Let \\(a\\) and \\(x\\) be elements of a group. What is the conjugation of \\(x\\) via \\(a\\)?" },
-    { id: "Q19", text: "19. What is the base of \\(\\log\\)?" },
-    { id: "Q20", text: "20. For \\(x\\in \\mathbb{R}^n\\), what is the norm of \\(x\\)?" },
-    { id: "Q21", text: "21. What is the range of \\(f:X\\to Y\\)?" },
-    { id: "Q22", text: "22. What is \\(\\log^2(x)\\)?" },
-    { id: "Q23", text: "23. What is the set of limit points of \\(\\{1\\}\\)?" },
-    { id: "Q24", text: "24. Is \\(f(x)=\\frac{1}{x}\\) continuous?" },
+    { id: "Q18", text: "18. Let $a$ and $x$ be elements of a group. What is the conjugation of $x$ via $a$?" },
+    { id: "Q19", text: "19. What is the base of $\\log$?" },
+    { id: "Q20", text: "20. For $x\\in \\mathbb{R}^n$, what is the norm of $x$?" },
+    { id: "Q21", text: "21. What is the range of $f:X\\to Y$?" },
+    { id: "Q22", text: "22. What is $\\log^2(x)$?" },
+    { id: "Q23", text: "23. What is the set of limit points of $\\{1\\}$?" },
+    { id: "Q24", text: "24. Is $f(x)=\\frac{1}{x}$ continuous?" },
     { id: "Q25", text: "25. When integrating, the symbol for the differential should be ..." },
     { id: "Q26", text: "26. A signed measure..." },
     { id: "Q27", text: "27. What is the usual variable name for the Yoneda embedding?" },
-    { id: "Q28", text: "28. What is the pronunciation of \"\\(\\LaTeX\\)\"?" },
-    { id: "Q29", text: "29. Is \\(f(x)=3x+1\\) linear?" },
-    { id: "Q30", text: "30. What is the value of \\(6\\div 2(1+2)\\)?" }
+    { id: "Q28", text: "28. What is the pronunciation of \"\\LaTeX\"?" },
+    { id: "Q29", text: "29. Is $f(x)=3x+1$ linear?" },
+    { id: "Q30", text: "30. What is the value of $6\\div2(1+2)$?" }
   ];
 
   // Beautiful, vibrant color palette
@@ -320,32 +341,13 @@ title: Mathematical Conventions Survey 2026
         
         const textSpan = document.createElement('span');
         textSpan.className = 'legend-text';
-        
-        let formattedLabel = label.trim();
-        // Force wrap all legends in proper MathJax format if they look even somewhat like math
-        // since CSV might drop backslashes or leave bare letters.
-        const containsMathSymbols = /[\\]|[\^]|[_]|[{}]|[=]|[+]|[-]/.test(formattedLabel);
-        const containsVariables = /^[a-zA-Z]$/.test(formattedLabel) || /^([a-zA-Z]\/[a-zA-Z]|[a-zA-Z]\+[a-zA-Z])$/.test(formattedLabel);
-        
-        if (!formattedLabel.includes('\\(') && !formattedLabel.includes('$') && formattedLabel !== "Undefined" && !formattedLabel.includes('***') && (containsMathSymbols || containsVariables || formattedLabel.includes('D_n') || formattedLabel.includes('axa'))) {
-            // Fix missing backslashes for text inside math 
-            if (formattedLabel.startsWith("is allowed to")) {
-                formattedLabel = `\\( \\text{is allowed to take values in } \\{-\\infty, +\\infty\\} \\text{ (but not both)} \\)`;
-            } else if (formattedLabel.startsWith("2Z = {n")) {
-                formattedLabel = `\\( 2\\mathbb{Z} = \\{n \\in \\mathbb{Z} \\mid n \\text{ is even}\\} \\)`;
-            } else if (formattedLabel.includes('LaTeX')) {
-                // LaTeX logo has trouble inside quotes
-                formattedLabel = `\\LaTeX`;
-            } else {
-                formattedLabel = `\\(${formattedLabel}\\)`;
-            }
+        // Wrap with inline math if it contains backslashes and doesn't have $
+        let formattedLabel = label;
+        if (label.includes('\\') && !label.includes('$')) {
+            formattedLabel = `$${label}$`;
+        } else if (label === "m/n" || label === "n/m" || label === "a/b" || label === "m+n" || label === "n+m") {
+            formattedLabel = `$${label}$`;
         }
-        
-        // Clean up any stray quotes around LaTeX
-        if (formattedLabel === '"\\LaTeX"') {
-             formattedLabel = '"\\(\\LaTeX\\)"';
-        }
-
         textSpan.innerHTML = formattedLabel;
         
         item.appendChild(colorBox);
