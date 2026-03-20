@@ -28,7 +28,8 @@ We host sessions where experienced speakers and faculty members share their tips
 * **Mar 3** -- Mary Pugh -- [Some Thoughts on Test Design](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1772572200-1771895060-753)
 * **Mar 17** -- Almut Burchard -- [Joys of Teaching Mathematics](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1773778200-1773339876-678)
   * *What is the role of teaching, within our life in Mathematics? What motivates us, what are the challenges, and how does our teaching practice intersect with other goals and demands?*
-* **Mar 24** -- Elden Elmanto -- Working class mathematics
+* **Mar 23** -- Elden Elmanto -- [Working class mathematics](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1774296600-1773975241-407)
+  * *I want to explain the joy, perils, importance and art of doing "abstract" mathematics.*
 
 
 ### Useful Resources
