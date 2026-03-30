@@ -30,7 +30,7 @@ We host sessions where experienced speakers and faculty members share their tips
   * *What is the role of teaching, within our life in Mathematics? What motivates us, what are the challenges, and how does our teaching practice intersect with other goals and demands?*
 * **Mar 23** -- Elden Elmanto -- [Working class mathematics](https://seminars.math.toronto.edu/pages/seminars?case=view_talk&talk_id=1774296600-1773975241-407)
   * *I want to explain the joy, perils, importance and art of doing "abstract" mathematics.*
-* **April 5** -- Stan Yoshinobu -- A brief overview of “big tent” inquiry-based learning
+* **April 7** -- Stan Yoshinobu -- A brief overview of “big tent” inquiry-based learning
   * *In this talk, I’ll discuss what is meant by “big tent” inquiry-based learning (IBL) via the four pillars of IBL and share a core (historical) example as a starting point. I’ll share some background information, research related to inquiry-based learning in North America and efforts in teaching professional development, and lastly “riffs” off of the core example that have been applied in large class settings. This talk is focused on the historical roots and broader themes in inquiry-based learning in undergraduate math education.*
 
 
