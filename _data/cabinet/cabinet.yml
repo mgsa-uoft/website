@@ -2,30 +2,30 @@ committees:
   Executive:
     - position: President
       officers:
-        - name: Grisha Taroyan 
-          email: grisha.taroian@mail.utoronto.ca
+        - name: Alexander Mirabella 
+          email: alexander.mirabella@mail.utoronto.ca
 
     - position: Vice president
       officers:
-        - name: Osama Farooqui
-          email: o.farooqui@mail.utoronto.ca
+        - name: Ramana Murugesan
+          email: ramana.murugesan@mail.utoronto.ca
 
     - position: Treasurer
       officers:
-        - name: Austin Sun
-          email: austin.sun@mail.utoronto.ca
+        - name: Tara Stojimirovic
+          email: tara.stojimirovic@mail.utoronto.ca
 
     - position: Secretary
-      officers:
-        - name: Kevin Santos
-          email: kevin.santos@mail.utoronto.ca
-
-    - position: Academic chair
       officers:
         - name: Tresa LeBlanc-Doucet
           email: tresa.leblanc.doucet@mail.utoronto.ca
 
+    - position: Academic chair
+      officers:
+        - name: Derek Wu
+          email: pangolin.wu@mail.utoronto.ca
+
     - position: Social chair
       officers:
-        - name: Alex Kroitor
-          email: alex.kroitor@mail.utoronto.ca
+        - name: Nitit Jongsawatsataporn
+          email: n.jongsawatsataporn@mail.utoronto.ca
